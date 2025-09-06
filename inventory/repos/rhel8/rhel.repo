@@ -1,0 +1,44 @@
+[codeready-builder-for-rhel-8-x86_64-rpms]
+name=Red Hat CodeReady Linux Builder for RHEL 8 x86_64 (RPMs)
+baseurl=https://cert.console.redhat.com/api/pulp-content/ccac33ac/bff449ca-1f4e-42f8-9784-5835e405e35f/55f19063-63b6-4bd3-9454-6db789befa9b/
+module_hotfixes=0
+gpgcheck=1
+repo_gpgcheck=0
+enabled=1
+gpgkey=https://console.redhat.com/api/content-sources/v1.0/repository_gpg_key/bff449ca-1f4e-42f8-9784-5835e405e35f
+sslclientcert=/etc/pki/consumer/cert.pem
+sslclientkey=/etc/pki/consumer/key.pem
+
+[rhel-8-for-x86_64-baseos-rpms]
+name=Red Hat Enterprise Linux 8 for x86_64 - BaseOS (RPMs)
+baseurl=https://cert.console.redhat.com/api/pulp-content/ccac33ac/82134217-1f18-4e58-8cd7-cb8a3ab0c31b/cc1375e5-9cd9-48c2-a01c-9da02ff15ff0/
+module_hotfixes=0
+gpgcheck=1
+repo_gpgcheck=0
+enabled=1
+gpgkey=https://console.redhat.com/api/content-sources/v1.0/repository_gpg_key/82134217-1f18-4e58-8cd7-cb8a3ab0c31b
+sslclientcert=/etc/pki/consumer/cert.pem
+sslclientkey=/etc/pki/consumer/key.pem
+
+[rhel-8-for-x86_64-appstream-rpms]
+name=Red Hat Enterprise Linux 8 for x86_64 - AppStream (RPMs)
+baseurl=https://cert.console.redhat.com/api/pulp-content/ccac33ac/0606ed80-e72a-4d34-98e9-b2e9548425c6/aed60e15-b243-4f0a-9b29-48a1fad7bdc9/
+module_hotfixes=0
+gpgcheck=1
+repo_gpgcheck=0
+enabled=1
+gpgkey=https://console.redhat.com/api/content-sources/v1.0/repository_gpg_key/0606ed80-e72a-4d34-98e9-b2e9548425c6
+sslclientcert=/etc/pki/consumer/cert.pem
+sslclientkey=/etc/pki/consumer/key.pem
+
+
+[rhel-8-for-x86_64-supplementary-rpms]
+name=Red Hat Enterprise Linux 8 for x86_64 - Supplementary (RPMs)
+baseurl=https://cert.console.redhat.com/api/pulp-content/ccac33ac/5755ce88-76ef-44f5-967c-5f89ab9e15df/dbeca849-5fde-4bec-b0c5-6e0ad7c8e176/
+module_hotfixes=0
+gpgcheck=1
+repo_gpgcheck=0
+enabled=1
+gpgkey=https://console.redhat.com/api/content-sources/v1.0/repository_gpg_key/5755ce88-76ef-44f5-967c-5f89ab9e15df
+sslclientcert=/etc/pki/consumer/cert.pem
+sslclientkey=/etc/pki/consumer/key.pem
