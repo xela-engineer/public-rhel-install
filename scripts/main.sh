@@ -1,5 +1,4 @@
 #!/bin/bash
-set -e
 
 # Install oh-my-bash
 if [ -d "$HOME/.oh-my-bash" ]; then
