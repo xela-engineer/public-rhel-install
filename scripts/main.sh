@@ -23,13 +23,12 @@ dnf install -y xorg-x11-xauth jq glibc-langpack-en
 
 echo "Installation completed"
 
-# Fix the locale issue
-if ! grep -q "export LC_ALL=C.UTF-8" ~/.bashrc; then
-    echo "Setting locale to C.UTF-8"
-    echo "export LC_ALL=C.UTF-8" >> ~/.bashrc
-fi
+# Check the locale issue
 ansible --help > /dev/null 2>&1
 if [ $? -ne 0 ]; then
     echo "Ansible installation failed. Please check the installation logs."
     exit 1
 fi
+
+# Other init steps
+touch /root/.Xauthority
