@@ -21,6 +21,10 @@ if [ $? -ne 0 ]; then
 fi
 
 # Install Repo
+if [ ! -f ../inventory/repos/rhel8/rhel.repo ]; then
+  echo "Error: ../inventory/repos/rhel8/rhel.repo does not exist."
+  exit 1
+fi
 touch /etc/yum.repos.d/rhel.repo
 cp ../inventory/repos/rhel8/rhel.repo /etc/yum.repos.d/rhel.repo
 
