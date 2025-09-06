@@ -2,11 +2,18 @@
 set -e
 
 # Install oh-my-bash
-bash -c "$(curl -fsSL https://raw.githubusercontent.com/ohmybash/oh-my-bash/master/tools/install.sh)"
-sed -i 's/OSH_THEME="font"/OSH_THEME="agnoster"/g' ~/.bashrc
+if [ -d "$HOME/.oh-my-bash" ]; then
+    echo "oh-my-bash is already installed."
+else
+    bash -c "$(curl -fsSL https://raw.githubusercontent.com/ohmybash/oh-my-bash/master/tools/install.sh)"
+    sed -i 's/OSH_THEME="font"/OSH_THEME="agnoster"/g' ~/.bashrc
+fi
 
 # Fix the locale issue
-echo "export LC_ALL=C.UTF-8" >> ~/.bashrc
+if ! grep -q "export LC_ALL=C.UTF-8" ~/.bashrc; then
+    echo "Setting locale to C.UTF-8"
+    echo "export LC_ALL=C.UTF-8" >> ~/.bashrc
+fi
 ansible --help > /dev/null 2>&1
 if [ $? -ne 0 ]; then
     echo "Ansible installation failed. Please check the installation logs."
