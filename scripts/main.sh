@@ -10,12 +10,12 @@ fi
 
 echo "Installing Repo"
 
-if [ ! -f ../inventory/repos/rhel8/rhel.repo ]; then
-  echo "Error: ../inventory/repos/rhel8/rhel.repo does not exist."
+if [ ! -f ./public-rhel-install/inventory/repos/rhel8/rhel.repo ]; then
+  echo "Error: ./public-rhel-install/inventory/repos/rhel8/rhel.repo does not exist."
   exit 1
 fi
 touch /etc/yum.repos.d/rhel.repo
-cp ../inventory/repos/rhel8/rhel.repo /etc/yum.repos.d/rhel.repo
+cp ./public-rhel-install/inventory/repos/rhel8/rhel.repo /etc/yum.repos.d/rhel.repo
 
 # Install jq
 dnf install -y xorg-x11-xauth jq glibc-langpack-en
