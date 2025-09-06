@@ -20,7 +20,8 @@ if [ $? -ne 0 ]; then
     exit 1
 fi
 
-# Install Repo
+echo "Installing Repo"
+
 if [ ! -f ../inventory/repos/rhel8/rhel.repo ]; then
   echo "Error: ../inventory/repos/rhel8/rhel.repo does not exist."
   exit 1
@@ -30,3 +31,6 @@ cp ../inventory/repos/rhel8/rhel.repo /etc/yum.repos.d/rhel.repo
 
 # Install jq
 dnf install -y xorg-x11-xauth jq
+
+
+echo "Installation completed"
